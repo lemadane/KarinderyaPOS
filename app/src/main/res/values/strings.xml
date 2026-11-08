@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KarinderyaPOS</string>
+
+    <!-- Auth -->
+    <string name="login_subtitle">Food ordering &amp; POS for canteens and karinderyas</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="full_name">Full name</string>
+    <string name="login">Log in</string>
+    <string name="create_account">Create a crew account</string>
+    <string name="register_title">New crew account</string>
+    <string name="register">Create account</string>
+    <string name="error_invalid_login">Wrong username or password</string>
+    <string name="error_required">Required</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+
+    <!-- Navigation -->
+    <string name="nav_pos">Order</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_menu">Menu</string>
+    <string name="nav_more">More</string>
+
+    <!-- POS -->
+    <string name="search_menu">Search menu</string>
+    <string name="all">All</string>
+    <string name="sold_out">SOLD OUT</string>
+    <string name="view_order">Checkout</string>
+    <string name="empty_menu_pos">No Meal of the Day items. Tag dishes as Meal of the Day in the Menu tab.</string>
+    <string name="no_matching_meals">No Meal of the Day items match your search or category.</string>
+    <string name="clear_cart">Clear order</string>
+    <string name="clear_cart_confirm">Remove all items from the current order?</string>
+
+    <!-- Checkout -->
+    <string name="checkout_title">Checkout</string>
+    <string name="order_items">Items</string>
+    <string name="order_type">Order type</string>
+    <string name="dine_in">Dine-in</string>
+    <string name="take_out">Take-out</string>
+    <string name="customer_label">Table no. / Customer name (optional)</string>
+    <string name="discount">Discount</string>
+    <string name="discount_none">None</string>
+    <string name="discount_senior">Senior 20%</string>
+    <string name="discount_pwd">PWD 20%</string>
+    <string name="manage_discounts">Manage discounts</string>
+    <string name="authenticate_discounts">Enter your current account password to manage discounts.</string>
+    <string name="verify_password">Verify password</string>
+    <string name="add_discount">Add discount</string>
+    <string name="edit_discount">Edit discount</string>
+    <string name="discount_name">Discount name</string>
+    <string name="discount_percentage">Discount percentage</string>
+    <string name="discount_rate">%1$d%%</string>
+    <string name="discount_option">%1$s — %2$d%%</string>
+    <string name="no_custom_discounts" formatted="false">No custom discounts yet. Add a named 5%, 8%, 10%, 12%, 15%, 18%, or 20% discount.</string>
+    <string name="delete_discount_confirm">Delete \"%1$s\"? Past orders keep their applied discount.</string>
+    <string name="discount_unavailable">The selected discount is no longer available. Choose a discount again.</string>
+    <string name="notes">Notes (e.g. walang sibuyas)</string>
+    <string name="payment">Payment</string>
+    <string name="cash">Cash</string>
+    <string name="gcash">GCash</string>
+    <string name="maya">Maya</string>
+    <string name="cash_tendered">Cash received</string>
+    <string name="exact">Exact</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="total">Total</string>
+    <string name="change">Change</string>
+    <string name="place_order">Place order · %1$s</string>
+    <string name="error_cash_short">Cash received is less than the total</string>
+    <string name="order_placed">Order %1$s placed</string>
+    <string name="cart_empty">The order is empty</string>
+
+    <!-- Orders -->
+    <string name="filter_active">Active</string>
+    <string name="filter_today">Today</string>
+    <string name="filter_all">All</string>
+    <string name="search_orders">Search order no. or customer</string>
+    <string name="no_orders">No orders yet</string>
+    <string name="order_title">Order %1$s</string>
+    <string name="mark_status">Mark as %1$s</string>
+    <string name="cancel_order">Cancel order</string>
+    <string name="cancel_order_confirm">Cancel this order? It will be excluded from sales.</string>
+    <string name="share_receipt">Share receipt</string>
+
+    <!-- Menu management -->
+    <string name="add_menu_item">Add dish</string>
+    <string name="edit_menu_item">Edit dish</string>
+    <string name="no_menu_items">No dishes yet. Tap + to add one.</string>
+    <string name="item_name">Dish name</string>
+    <string name="category">Category</string>
+    <string name="price">Price (₱)</string>
+    <string name="description">Description (optional)</string>
+    <string name="available">Available today</string>
+    <string name="meal_of_day">Meal of the Day</string>
+    <string name="photo_gallery">Gallery</string>
+    <string name="photo_camera">Camera</string>
+    <string name="photo_remove">Remove</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="delete_item_confirm">Delete \"%1$s\"? Past orders keep their records.</string>
+    <string name="error_price">Enter a valid price</string>
+    <string name="error_photo">Could not load photo</string>
+    <string name="error_no_camera">No camera app available</string>
+    <string name="saved">Saved</string>
+    <string name="discard_changes">Discard changes?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep editing</string>
+
+    <!-- More -->
+    <string name="sales_report">Sales report</string>
+    <string name="store_name">Store name</string>
+    <string name="change_password">Change password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="password_changed">Password changed</string>
+    <string name="error_wrong_password">Current password is incorrect</string>
+    <string name="export_backup">Export backup (JSON)</string>
+    <string name="import_backup">Import backup (JSON)</string>
+    <string name="export_done">Backup exported. Dishes: %1$d, orders: %2$d</string>
+    <string name="import_done">Backup imported. Dishes: %1$d, orders: %2$d</string>
+    <string name="import_confirm">Merge the backup into this device? Items with the same ID will be overwritten.</string>
+    <string name="logout">Log out</string>
+    <string name="logout_confirm">Log out of this device?</string>
+    <string name="logged_in_as">Logged in as</string>
+
+    <!-- Reports -->
+    <string name="range_today">Today</string>
+    <string name="range_7_days">7 days</string>
+    <string name="range_30_days">30 days</string>
+    <string name="orders_label">Orders</string>
+    <string name="gross_sales">Gross sales</string>
+    <string name="discounts">Discounts</string>
+    <string name="net_sales">Net sales</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="by_payment">By payment method</string>
+    <string name="top_items">Best sellers</string>
+    <string name="no_sales">No sales in this period</string>
+
+    <!-- Trial -->
+    <plurals name="trial_days_left">
+        <item quantity="one">Trial ends in %d day. Export a backup to keep your data.</item>
+        <item quantity="other">Trial ends in %d days. Export a backup to keep your data.</item>
+    </plurals>
+    <string name="trial_expired_title">Trial period ended</string>
+    <string name="trial_expired_message">This copy of %1$s was installed on %2$s and its %3$d-day trial ended on %4$s. You can still export a backup of your menu and orders.</string>
+    <string name="trial_clock_title">Check the date and time</string>
+    <string name="trial_clock_message">The device date is earlier than when %1$s was last used. Set the correct date and time (turn on automatic date &amp; time), then tap Try again.</string>
+    <string name="trial_retry">Try again</string>
+    <string name="trial_export">Export backup</string>
+    <string name="trial_close">Close app</string>
+    <string name="ok">OK</string>
+
+    <!-- Common -->
+    <plurals name="cart_summary">
+        <item quantity="one">%1$d item · %2$s</item>
+        <item quantity="other">%1$d items · %2$s</item>
+    </plurals>
+    <string name="negative_amount">-%1$s</string>
+    <string name="no_value">—</string>
+    <string name="order_no">#%1$s</string>
+    <string name="username_handle">\@%1$s</string>
+    <string name="version_info">%1$s v%2$s\nAll data is stored offline on this device (SQLite).</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="error_generic">Something went wrong: %1$s</string>
+    <string name="decrease">Decrease</string>
+    <string name="increase">Increase</string>
+    <string name="menu_photo">Dish photo</string>
+</resources>

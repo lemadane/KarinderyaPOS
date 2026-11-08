@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+}
+
+def signingPropertiesFile = new File(System.getenv('KARINDERYA_SIGNING_PROPERTIES')
+        ?: "${System.getProperty('user.home')}/.local/share/karinderyapos-signing/upload.properties")
+def signingProperties = new Properties()
+if (signingPropertiesFile.exists()) {
+    signingPropertiesFile.withInputStream { signingProperties.load(it) }
+    ['storeFile', 'storePassword', 'keyAlias', 'keyPassword'].each { name ->
+        if (!signingProperties.getProperty(name)) {
+            throw new GradleException("Missing release signing property: ${name}")
+        }
+    }
+}
+
+android {
+    namespace 'ph.karinderya.pos'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'ph.lemadane.karinderya.pos'
+        minSdk 26
+        targetSdk 36
+        versionCode 2
+        versionName '1.1'
+
+        // Offline trial length, counted from installation.
+        buildConfigField 'int', 'TRIAL_DAYS', '200'
+    }
+
+    signingConfigs {
+        if (signingPropertiesFile.exists()) {
+            release {
+                storeFile file(signingProperties.getProperty('storeFile'))
+                storePassword signingProperties.getProperty('storePassword')
+                keyAlias signingProperties.getProperty('keyAlias')
+                keyPassword signingProperties.getProperty('keyPassword')
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField 'boolean', 'TRIAL_EXEMPT', 'true'
+        }
+        release {
+            if (signingPropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            }
+            buildConfigField 'boolean', 'TRIAL_EXEMPT', 'false'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    packaging {
+        resources {
+            excludes += ['META-INF/LICENSE*', 'META-INF/NOTICE*', 'META-INF/versions/9/module-info.class']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.exifinterface:exifinterface:1.3.7'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.2'
+
+    testImplementation 'junit:junit:4.13.2'
+}

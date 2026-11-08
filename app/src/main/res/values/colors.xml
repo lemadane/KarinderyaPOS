@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#C62828</color>
+    <color name="brand_primary_dark">#8E0000</color>
+    <color name="brand_secondary">#F9A825</color>
+    <color name="brand_surface">#FFF8F3</color>
+    <color name="status_preparing">#EF6C00</color>
+    <color name="status_ready">#2E7D32</color>
+    <color name="status_served">#546E7A</color>
+    <color name="status_cancelled">#9E9E9E</color>
+    <color name="ic_launcher_background">#C62828</color>
+</resources>
